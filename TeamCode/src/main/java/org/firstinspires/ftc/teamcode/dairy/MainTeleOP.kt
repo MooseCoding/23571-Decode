@@ -7,7 +7,7 @@ import org.firstinspires.ftc.teamcode.dairy.subsystems.Drivetrain
 // Use @subsystem.Attach to use it
 @Drivetrain.Attach
 @TeleOp
-class DairyMain: OpMode() {
+class MainTeleOP: OpMode() {
     override fun init() {
         // Use Mercurial.gamepadX.button.onTrue or such
 
