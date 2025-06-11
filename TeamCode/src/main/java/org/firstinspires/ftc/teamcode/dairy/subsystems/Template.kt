@@ -40,3 +40,11 @@ object Template : Subsystem {
             }
     }
 }
+
+/*
+
+IF YOU NEED A SUB-SUBSYSTEM (ie intake claw) PUT IT IN THE SAME FILE PLEASE FOR ORGANIZATIONAL REASONS OR FOLDER IT
+
+But please use the Endgame, Intake, and Outtake systems to construct everything <3
+
+ */
