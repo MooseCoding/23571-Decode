@@ -1,4 +1,2 @@
-# Road Runner Quickstart
-
-Check out the [docs](https://rr.brott.dev/docs/v1-0/tuning/).
+# 23571's Team Code for Decode FTC season
 
