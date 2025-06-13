@@ -1,4 +1,4 @@
-# UTIL PURPOSE
+# Explanation
 
 Util is the general purpose folder for any needed objects/classes like a waiter.
 By itself, its useless meant to facilitate the other functions and programs we write. 
