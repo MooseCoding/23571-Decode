@@ -63,9 +63,7 @@ public class FConstants { // This is how we change Follower Constants.
 
         FollowerConstants.drivePIDFFeedForward = 0.01;
 
-        FollowerConstants.driveKalmanFilterParameters = new KalmanFilterParameters(
-                6,
-                1);
+        FollowerConstants.driveKalmanFilterParameters = new KalmanFilterParameters(6, 1);
 
         FollowerConstants.centripetalScaling = centri;
 
