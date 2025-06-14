@@ -18,6 +18,6 @@ Have an @Disabled in the annotations of your tuner when not in use, so it doesn'
 Make sure that this one program can fully debug any issue on your subsystem 
 
 
-Only exception is Drive.kt due to its importance and because I said so 
+DO NOT DISABLE DRIVE.KT, THIS IS FOR IF EVERYTHING ELSE FAILS WE HAVE SOMETHING
 
 
