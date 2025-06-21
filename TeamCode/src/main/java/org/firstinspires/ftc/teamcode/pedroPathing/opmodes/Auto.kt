@@ -26,8 +26,9 @@ class Auto: OpMode() {
     private lateinit var follower: Follower // this is the follower for PP
     private lateinit var path: PathChain // this is the path we'll follow
     private var pathState: Int = 0 // This is counting which path we are currently on
-    private val init_pose: Pose = Pose(0.0,0.0,0.0) // Intial pose of the robot
+    private val initPose: Pose = Pose(0.0,0.0,0.0) // Initial pose of the robot
 
+    // This is the function to generate the path that we'll use to traverse the field on
     fun GeneratedPath(): PathChain {
         val builder = PathBuilder()
 
@@ -42,6 +43,7 @@ class Auto: OpMode() {
 
         return builder.build()
     }
+
     fun autonomousPathUpdate() { // Note only increment path state when you can check isClose
         if(pathState == 0) {
             // This is the intial then we go into the switch statement
@@ -54,22 +56,32 @@ class Auto: OpMode() {
                 }
 
                 1 -> {
-
+                    // Use positive integers on the interval [1, pathChain.length] to have your logic code
+                    // This is when your position will be at the start of pathChain[i] where i is your integer
                 }
             }
+            follower.followPath(path.getPath(pathState)) // Follow the path
+            pathState++ // Increase our path state
         }
     }
 
     override fun init() {
-        follower = Follower(hardwareMap, FConstants::class.java, LConstants::class.java)
-        follower.setStartingPose(init_pose) // Setting intial pose of the robot on the field for follower
-        path = GeneratedPath()
+        follower = Follower(hardwareMap, FConstants::class.java, LConstants::class.java) // Setting up the follower
+        follower.setStartingPose(initPose) // Setting intial pose of the robot on the field for follower
+        path = GeneratedPath() // Generating our path
     }
 
     override fun loop() {
-        autonomousPathUpdate()
-        telemetry.apply {}
-        telemetry.update()
+        follower.update() // Update our follower to get our current information
+
+        autonomousPathUpdate() // Update our autonomous path to continue or run any thing we need
+
+        telemetry.apply {
+            addData("Robot X Position", follower.pose.x)
+            addData("Robot Y Position", follower.pose.y)
+            addData("Robot Heading", follower.pose.heading)
+        } // Add logging data
+        telemetry.update() // Send logging data
     }
 
 }

@@ -1,4 +1,8 @@
-#  INSTRUCTIONS FOR SUBSYSTEM CREATION
+# Explanation
+
+Subsystems are groups of sensors, motors, servos or a combination of them that we can then make methods for, allowing for us to easily access them in our main teleop classes or tuners.
+
+#  Instructions for subsystem creation
 
 Copy and paste the Template.kt object into your desired Subsystem.kt file
 
@@ -8,7 +12,7 @@ Do not make a vision subsystem, let me (Topher) write the code for that one, it 
 
 
 
-# STEPS FOR SUBSYSTEM CREATION
+# Steps for creation
 
 Here are the steps to make a subsystem
 

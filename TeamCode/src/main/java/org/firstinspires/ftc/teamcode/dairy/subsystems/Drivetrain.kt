@@ -41,6 +41,32 @@ object Drivetrain: Subsystem {
         FeatureRegistrar.activeOpMode.hardwareMap.dcMotor.get("frontRight")
     }
 
+		/*
+
+		val fL:DcMotor by subsystemCell {
+        val m = FeatureRegistrar.activeOpMode.hardwareMap.dcMotor.get("frontLeft")
+		    m.direction = DcMotorSimple.Direction.REVERSE
+				m
+		}
+
+    val bL:DcMotor by subsystemCell {
+        val m = FeatureRegistrar.activeOpMode.hardwareMap.dcMotor.get("backLeft")
+		    m.direction = DcMotorSimple.Direction.REVERSE
+				m
+		}
+
+    val bR:DcMotor by subsystemCell {
+        val m = FeatureRegistrar.activeOpMode.hardwareMap.dcMotor.get("backRight")
+		    m
+		}
+
+    val fR:DcMotor by subsystemCell {
+        val m = FeatureRegistrar.activeOpMode.hardwareMap.dcMotor.get("frontRight")
+		    m
+		}
+		
+		*/
+
     // This is after we press init pretty much setting up the update loop
     override fun postUserInitHook(opMode: Wrapper){
         fL!!.direction = DcMotorSimple.Direction.REVERSE
