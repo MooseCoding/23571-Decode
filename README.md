@@ -2,7 +2,7 @@
 
 ## TO DO LIST
 
-- [ X ] Auto Docs
+- [x] Auto Docs
 
 - [ ] Subsystems
 
