@@ -2,11 +2,11 @@
 
 ## TO DO LIST
 
-- [ ] Auto Docs
+- [x] Auto Docs
 
 - [ ] Subsystems
 
-- [ ] TeleOP
+- [ ] TeleOP code
 
 - [ ] Auto code
 

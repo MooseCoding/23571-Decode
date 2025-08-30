@@ -85,13 +85,30 @@ dependencies {
     implementation "dev.frozenmilk.dairy:Core:2.2.1"
     implementation "dev.frozenmilk:Sinister:2.2.0"
     implementation "dev.frozenmilk.dairy:Pasteurized:1.0.0"
-    implementation "dev.frozenmilk.sinister:Sloth:0.2.1"
+    implementation "dev.frozenmilk.sinister:Sloth:0.2.2"
     implementation "dev.frozenmilk.mercurial:Mercurial:1.0.3"
 
     implementation "org.ftclib.ftclib:core:2.1.1" // Note we only use this for the PID stuff
 }
 
 
+<<<<<<< HEAD
 
+=======
+buildscript {
+    repositories {
+        mavenCentral()
+        maven{
+            url "https://repo.dairy.foundation/releases"
+        }
+    }
+
+    dependencies {
+        classpath "dev.frozenmilk:Load.0.2.2"
+    }
+}
+
+apply plugin: 'dev.frozenmilk.sinister.sloth.load'
+>>>>>>> refs/remotes/origin/main
 
 
