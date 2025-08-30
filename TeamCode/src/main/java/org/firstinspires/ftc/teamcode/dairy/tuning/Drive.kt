@@ -20,6 +20,9 @@ class Drive: OpMode() {
     }
 
     override fun loop() {
-
+        telemetry.apply {
+            addData("hi", "works")
+        }
+        telemetry.update()
     }
 }
